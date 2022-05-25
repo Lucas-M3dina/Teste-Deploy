@@ -12,21 +12,6 @@ hooks:
     - location: aws/deployment/application_stop/stop_cloudplanning.sh
       timeout: 20
       runas: ec2-user
-  AfterInstall:
-    - location: aws/deployment/after_install/1_update_figaro.sh
-      timeout: 20
-      runas: ec2-user
-    - location: aws/deployment/after_install/2_install_gems.sh
-      timeout: 300
-      runas: ec2-user
-    - location: aws/deployment/after_install/5_npm_install.sh
-      timeout: 300
-      runas: ec2-user
-    - location: aws/deployment/after_install/3_run_migrations.sh
-      runas: ec2_user
-    - location: aws/deployment/after_install /4_compile_assets.sh
-      runas: ec2-user
-      timeout: 60
 ApplicationStart:
     - location: aws/deployment/application_start/start_cloudplanning.sh
       timeout: 20
