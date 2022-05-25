@@ -12,10 +12,6 @@ hooks:
     - location: aws/deployment/application_stop/stop_cloudplanning.sh
       timeout: 20
       runas: ec2-user
-  BeforeInstall:
-    - location: aws/deployment/before_install/0_create_tmp_dirs.sh
-      timeout: 10
-      runas: ec2-user
   AfterInstall:
     - location: aws/deployment/after_install/1_update_figaro.sh
       timeout: 20
